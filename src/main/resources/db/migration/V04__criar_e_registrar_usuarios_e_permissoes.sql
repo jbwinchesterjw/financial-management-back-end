@@ -19,7 +19,7 @@ CREATE TABLE usuario_permissao (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO usuario (codigo, nome, email, senha) values (1, 'Administrador', 'admin@financialmanagement.com', '$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.');
-INSERT INTO usuario (codigo, nome, email, senha) values (2, 'Joao silva', 'joao@financialmanagement.com', '$2a$10$RJnXZtHjjghhyWpsEIveFesnKMD8qUQI2lulxgtNjKIRRav3CJL.u');
+INSERT INTO usuario (codigo, nome, email, senha) values (2, 'Joao silva', 'joao@financialmanagement.com', '$2a$10$BNv17IeR9AbGFL2GsSvOueGoZYU66cDhTSlMeGh0OYBkm.kvWYNCe');
 
 INSERT INTO permissao (codigo, descricao) values (1, 'ROLE_CADASTRAR_CATEGORIA');
 INSERT INTO permissao (codigo, descricao) values (2, 'ROLE_PESQUISAR_CATEGORIA');
