@@ -83,4 +83,11 @@ public class LancamentoResource {
     public void remover(@PathVariable Long codigo) {
         lancamentoRepository.deleteById(codigo);
     }
+
+    @PutMapping("/{codigo}")
+    @PreAuthorize("hasAuthority('ROLE_CADASTRAR_PESSOA') and hasAuthority('SCOPE_write')")
+    public ResponseEntity<Lancamento> atualizarLancamento(@PathVariable Long codigo, @Valid @RequestBody Lancamento lancamento){
+        Lancamento lancamento1 = lancamentoService.editarLancamento(codigo, lancamento);
+        return ResponseEntity.ok(lancamento1);
+    }
 }
